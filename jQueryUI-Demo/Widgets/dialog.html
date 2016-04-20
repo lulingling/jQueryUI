@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../jquery-ui-1.11.4.custom/jquery-ui.css">
+    <script src="../../jquery-ui-1.11.4.custom/jquery-2.1.4.min.js"></script>
+    <script src="../../jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <style>
+        .no-close .ui-dialog-titlebar-close {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                /*隐藏close button*/
+                dialogClass: "no-close",
+
+                buttons: [
+                    {
+                        text: "OK",
+                        icons: {
+                            primary: "ui-icon-heart"
+                        },
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ],
+
+                autoOpen: true,
+
+                draggable: false,
+
+                hide: {
+                    effect: "explode", duration: 500
+                },
+
+                modal:true
+            });
+        })
+    </script>
+</head>
+<body>
+<div id="dialog" title="Basic Title">
+    <p>
+        This is the default dialog which is useful for displaying information.
+        The dialog window can be moved, resized and closed with the 'x' icon.
+    </p>
+</div>
+</body>
+</html>
