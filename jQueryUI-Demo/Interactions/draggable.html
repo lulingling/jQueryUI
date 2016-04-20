@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../jquery-ui-1.11.4.custom/jquery-ui.css">
+    <script src="../../jquery-ui-1.11.4.custom/jquery-2.1.4.min.js"></script>
+    <script src="../../jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#draggable").draggable();
+        })
+    </script>
+</head>
+<body>
+<div id="draggable" class="ui-widget-content">
+    <p>Drag me around</p>
+</div>
+</body>
+</html>
