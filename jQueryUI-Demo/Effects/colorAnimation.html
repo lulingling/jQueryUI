@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../jquery-ui-1.11.4.custom/jquery-ui.css">
+    <script src="../../jquery-ui-1.11.4.custom/jquery-2.1.4.min.js"></script>
+    <script src="../../jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <style>
+        .toggle {
+            width: 500px;
+            height: 200px;
+            position: relative;
+        }
+
+        #effect {
+            width: 240px;
+            height: 135px;
+            padding: 0.4em;
+            position: relative;
+            background: #ffffff;
+        }
+
+        #effect h3 {
+            margin: 0;
+            padding: 0.4em;
+            text-align: center;
+        }
+
+        #button {
+            padding: .5em 1em;
+            text-decoration: none;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            var state = true;
+            $("#button").click(function () {
+                if (state) {
+                    $("#effect").animate({
+                        backgroundColor: " #aa00000",
+                        color: "#fff",
+                        width: 500
+                    }, 1000);
+                } else {
+                    $("#effect").animate({
+                        backgroundColor: "#fff",
+                        color: "#000",
+                        width: 240
+                    }, 1000)
+                }
+                state = !state;
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="toggle">
+    <div id="effect" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header">Animate</h3>
+
+        <p>
+            Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+        </p>
+    </div>
+</div>
+
+<button id="button" class="ui-state-default ui-corner-all">Toggle effect</button>
+</body>
+</html>
